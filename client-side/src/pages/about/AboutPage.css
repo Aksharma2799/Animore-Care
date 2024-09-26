@@ -1,0 +1,46 @@
+.about-page {
+  padding: 20px;
+}
+
+.zigzag-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.zigzag-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.zigzag-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.zigzag-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .zigzag-section {
+    flex-direction: column; /* Stack image and content vertically */
+  }
+
+  .reverse {
+    flex-direction: column; /* Disable row-reverse on mobile */
+  }
+
+  .zigzag-image {
+    margin-bottom: 20px; /* Add spacing between image and content */
+  }
+}

@@ -1,14 +1,15 @@
-// index.js
-
-require('dotenv').config();
 const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
+
 const app = express();
-const PORT = process.env.PORT || 3000;
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+// Routes
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/shop', require('./routes/shopRoutes'));
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => app.listen(5000, () => console.log('Server running on port 5000')))
+  .catch(err => console.error('Failed to connect to DB', err));

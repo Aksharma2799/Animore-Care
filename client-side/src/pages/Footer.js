@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Logo */}
         <div className="mb-4 md:mb-0">
           <img
-            src="https://via.placeholder.com/150" 
+            src="https://i.ibb.co/6FT2h0v/a.jpg"
             alt="Logo"
             className="w-24 h-auto"
           />
@@ -20,9 +20,9 @@ const Footer = () => {
         {/* Address */}
         <div className="mb-4 md:mb-0">
           <p className="text-center md:text-left">
-            1234 Main St, <br />
-            City Name, Country <br />
-            Email: contact@domain.com
+            1234 Paharia Sarnath, <br />
+            Varanasi, India <br />
+            Email: contact@animorecare.com
           </p>
         </div>
 
